@@ -1,49 +1,53 @@
 {% load static %}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
 
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
 
-      <!-- Optional theme -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-      <link rel="stylesheet" href="{% static 'style.css' %}">
-      <link rel="stylesheet" href="{% static 'landing.css' %}">
-      <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <title>Hello, world!</title>
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="{% static 'css/landing.css' %}">
+
+
+</head>
+<body>
+
     <div class="general-container">
-        <div class="container  top-container">
+        <div class="container top-container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h1 class="title">Наш магазин скоро откроется</h1>
-                    <h1 class="title">Оставляйте свой Email в форме ниже</h1>
+                    <h1 class="title">Наш магазин скоро откроется!<br>
+                    Оставляйте Ваш имейл в форме ниже</h1>
                     <div>
-                        <form class="form-inline text-center" method="post">{% csrf_token %}
-                            <div class="form-group">
-                                <label for="exampleInputName2">Ваше имя: </label>
-                                {{ form.name }}
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail2">Ваш Email: </label>
-                                {{ form.email }}
-                            </div>
-                            <button type="submit" class="btn btn-primary">Отправить</button>
+                        <form action="" method="post" class="form-inline text-center">{% csrf_token %}
+                         <div class="form-group">
+                             <label>Ваш имейл: </label>
+                             <input name="{{ form.email.name }}" class="form-control">
+                         </div>
+                         <div class="form-group">
+                             <label>Ваше имя: </label>
+                             <input name="{{ form.name.name }}" class="form-control">
+                         </div>
+                         <button type="submit" class="btn btn-primary btn-orange">Отправить</button>
                         </form>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </body>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+</body>
 </html>

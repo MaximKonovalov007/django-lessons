@@ -43,7 +43,6 @@ html, body{
 }
 
 .product-item{
-    height: 360px;
     background-color: white;
     border: 1px solid lightgrey;
     position: relative;
@@ -51,6 +50,7 @@ html, body{
     text-align: center;
     margin-bottom: 10px;
 }
+
 
 .add-to-card-btn{
     position: absolute;
@@ -79,6 +79,8 @@ html, body{
 .product-image-item{
     padding: 5px;
     margin-bottom: 5px;
+    width: 400px;
+    height: 400px;
 }
 
 .navbar-top{
@@ -112,4 +114,14 @@ html, body{
 
 .form-error{
     color: red;
+}
+
+.product-item a img{
+    height: 50%;
+    background-size: cover;
+}
+
+.product-image{
+    height: 400px;
+    width: 400px;
 }
